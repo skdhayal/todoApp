@@ -8,7 +8,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Optimize mobile viewport -->
-    <title>Node/Angular Todo App</title>
+    <title>Node/Angular Todo App1</title>
     <!-- SCROLLS -->
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
     <!-- load bootstrap -->
@@ -25,22 +25,21 @@
         margin-bottom: 30px;
     }
     </style>
-    <!-- SPELLS -->
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://cdn.jsdelivr.net/animatecss/2.1.0/animate.min.css">
+
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-    <!-- load jquery -->
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
-    <!-- load angular -->
     <script src="core.js"></script>
 </head>
-<!-- SET THE CONTROLLER AND GET ALL TODOS -->
 
-<body ng-controller="mainController">
+<body ng-controller="mainController" class = "animated flip">
     <div class="container">
-        <!-- HEADER AND TODO COUNT -->
+        <a href="/about" class="navbar-brand">About ></a>
         <div class="jumbotron text-center">
             <h1>Todo Application <span class="label label-info">{{ todos.length }}</span></h1>
         </div>
-        <!-- TODO LIST -->
         <div id="todo-list" class="row">
             <div class="col-sm-4 col-sm-offset-4">
                 <!-- LOOP OVER THE TODOS IN $scope.todos -->
@@ -51,7 +50,6 @@
                 </div>
             </div>
         </div>
-        <!-- FORM TO CREATE TODOS -->
         <div id="todo-form" class="row">
             <div class="col-sm-8 col-sm-offset-2 text-center">
                 <form>
@@ -59,7 +57,6 @@
                         <!-- BIND THIS VALUE TO formData.text IN ANGULAR -->
                         <input type="text" class="form-control input-lg text-center" placeholder="" ng-model="formData.text">
                     </div>
-                    <!-- createToDo() WILL CREATE NEW TODOS -->
                     <button type="submit" class="btn btn-primary btn-lg" ng-click="createTodo()">Add</button>
                 </form>
             </div>

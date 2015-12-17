@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<html>
+
+<head>
+    <!-- META -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <!-- Force IE to use the latest rendering engine -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Optimize mobile viewport -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title></title>
+    <!-- SCROLLS -->
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://cdn.jsdelivr.net/animatecss/2.1.0/animate.min.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+</head>
+
+<body ng-controller="mainController">
+    <div class="container">
+        <a href="#" class="navbar-brand">
+            < Home</a>
+                <div class="row">
+                    <div class="col-sm-4 col-sm-offset-4 divFirst">
+                        Hi i am div first.
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4 col-sm-offset-4 divSecond" style="visibility:hidden;">
+                        Hi i am div second.
+                    </div>
+                </div>
+    </div>
+    <script type="text/javascript">
+    $(function() {
+        $('.navbar-brand').click(function() {
+            $('.divFirst').css('visibility', 'hidden')
+            $('.divSecond').css('visibility', 'visible')
+
+        })
+    })
+    </script>
+</body>
+
+</html>
