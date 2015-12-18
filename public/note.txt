@@ -1,0 +1,8 @@
+1. NPM & Git Command understanding.
+2. Task runner(gulp) and plugins uses by task-runners.
+3. SASS & SCSS.(handle crowsel design with jquery)
+4. Bootstrap.
+5. Bower (manage libraries) understanding.
+6. AngularJs.
+7. NodeJs.
+8. jQuery.
