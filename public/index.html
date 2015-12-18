@@ -10,7 +10,6 @@
     <!-- Optimize mobile viewport -->
     <title>Node/Angular Todo App1</title>
     <!-- SCROLLS -->
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
     <!-- load bootstrap -->
     <style>
     html {
@@ -26,17 +25,17 @@
     }
     </style>
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="http://cdn.jsdelivr.net/animatecss/2.1.0/animate.min.css">
-
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
-    <script src="core.js"></script>
+    <script src="js/core.js"></script>
 </head>
 
-<body ng-controller="mainController" class = "animated flip">
+<body ng-controller="mainController" class="animated">
     <div class="container">
-        <a href="/about" class="navbar-brand">About ></a>
+        <a href="/about" class="navbar-brand">About &nbsp;<i class='fa fa-chevron-right'></i></a>
         <div class="jumbotron text-center">
             <h1>Todo Application <span class="label label-info">{{ todos.length }}</span></h1>
         </div>

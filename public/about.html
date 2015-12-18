@@ -3,45 +3,79 @@
 <html>
 
 <head>
-    <!-- META -->
+    <title>About Page</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-    <!-- Force IE to use the latest rendering engine -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Optimize mobile viewport -->
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <title></title>
-    <!-- SCROLLS -->
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="http://cdn.jsdelivr.net/animatecss/2.1.0/animate.min.css">
+    <style>
+    .row:hover {
+        background-color: #ffb3b3;
+    }
+
+    .divHide {
+        display: none;
+    }
+
+    .divShow {
+        display: inline;
+    }
+
+    .animateFlip {
+        color: #7c7c7b;
+        text-decoration: none;
+        /*display: block;*/
+        -webkit-transition: all 250ms fadeout, fadeIn;
+        -moz-transition: all 250ms ease-in-out;
+        -o-transition: all 250ms ease-in-out;
+        transition: all 250ms ease-in-out;
+    }
+    </style>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
 </head>
 
 <body ng-controller="mainController">
     <div class="container">
-        <a href="#" class="navbar-brand">
-            < Home</a>
-                <div class="row">
-                    <div class="col-sm-4 col-sm-offset-4 divFirst">
-                        Hi i am div first.
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-4 col-sm-offset-4 divSecond" style="visibility:hidden;">
-                        Hi i am div second.
-                    </div>
-                </div>
+        <div class="row">
+            <a href="/" class="navbar-brand"><i class='fa fa-chevron-left'></i>&nbsp; Home</a>
+        </div>
+        <div class="row row1 animated">
+            Hi i am div first. </br>Hi i am div first. </br>Hi i am div first. </br>Hi i am div first. </br>Hi i am div first. </br>
+            Hi i am div first. </br>Hi i am div first. </br>Hi i am div first. </br>Hi i am div first. </br>Hi i am div first. </br>
+            Hi i am div first. </br>Hi i am div first. </br>Hi i am div first. </br>Hi i am div first. </br>Hi i am div first. </br>
+        </div>
+        <div class="row row2 divHide">
+            Hi i am div second.</br>Hi i am div second.</br>Hi i am div second.</br>Hi i am div second.</br>Hi i am div second.</br>
+            Hi i am div second.</br>Hi i am div second.</br>Hi i am div second.</br>Hi i am div second.</br>Hi i am div second.</br>
+            Hi i am div second.</br>Hi i am div second.</br>Hi i am div second.</br>Hi i am div second.</br>Hi i am div second.</br>
+        </div>
     </div>
     <script type="text/javascript">
     $(function() {
-        $('.navbar-brand').click(function() {
-            $('.divFirst').css('visibility', 'hidden')
-            $('.divSecond').css('visibility', 'visible')
+        // $('.row1').click(function() {
+        //     //$('.row1').addClass('animateFlip collapsed')
+        //     $('.row1').fadeOut( 1600, "flip");
+        //     //$('.row2').removeClass('divHide')
+        // })
+        // $('.row2').click(function() {
+        //     $('.row2').addClass('divHide')
+        //     $('.row1').removeClass('divHide')
+        // })
+        $(".row1").click(function() {
+            // function complete() {
+            //     $("<div>").text(this.id).appendTo(".row");
+            // }
+            // $(".row1").fadeOut(1600, "linear", complete);
+            // $('.row2').removeClass('divHide')
+            $('.row1').toggleClass('collapsed').fadeOut(1500);
+            $('.row2').removeClass('divHide')
+        });
 
-        })
     })
     </script>
 </body>
